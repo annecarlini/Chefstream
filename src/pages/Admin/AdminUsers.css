@@ -1,0 +1,115 @@
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s;
+}
+
+.search-box:focus-within {
+  border-color: rgba(255, 140, 0, 0.3);
+  box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.1);
+}
+
+.search-box svg {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.search-box input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.search-box input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.users-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.user-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  transition: all 0.3s;
+}
+
+.user-card:hover {
+  border-color: rgba(255, 140, 0, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255, 140, 0, 0.1);
+}
+
+.user-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 140, 0, 0.1);
+  border: 2px solid rgba(255, 140, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff8c00;
+  flex-shrink: 0;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-info h3 {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.user-detail {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.user-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-btn-danger {
+  padding: 0.5rem;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 0.5rem;
+  color: #ef4444;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-btn-danger:hover {
+  background: rgba(239, 68, 68, 0.2);
+  transform: scale(1.1);
+}
+
+.loading-state {
+  text-align: center;
+  padding: 4rem;
+  color: rgba(255, 255, 255, 0.6);
+}

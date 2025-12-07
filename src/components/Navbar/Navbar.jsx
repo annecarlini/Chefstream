@@ -1,11 +1,14 @@
 import React from 'react'
 import './Navbar.css'
 import logo from '../../assets/chef-stream-logo.png'
-import { Search, Bell, ScanFace, ChevronDown } from 'lucide-react'
+import { Search, Bell, ScanFace, ChevronDown, Settings } from 'lucide-react'
 import { logout } from '../../../firebase'
+import { useNavigate } from 'react-router-dom'
 
 
 const Navbar = () => {
+  const navigate = useNavigate()
+
   return (
     <div className="navbar">
       <div className="navbar-left">
@@ -27,7 +30,10 @@ const Navbar = () => {
           <ScanFace className='profile'/>
           <ChevronDown />
           <div className="dropdown">
-            <p onClick={()=>{logout()}}>Sign out of SkillFlix</p>
+            <p onClick={() => navigate('/admin')}>
+              <Settings size={16} /> Admin
+            </p>
+            <p onClick={()=>{logout()}}>Sign out of Chef Stream</p>
           </div>
 
         </div>
